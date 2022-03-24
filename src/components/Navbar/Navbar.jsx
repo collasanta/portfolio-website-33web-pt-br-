@@ -13,7 +13,7 @@ const Navbar = () => {
          <img src={images.logo} alt="logo"/>
       </div>
       <ul className='app__navbar-links'>
-         {['home','about', 'work', 'skills', 'contact' ].map((item)=> (
+         {['home','sobre', 'portfolio', 'expertise', 'contato' ].map((item)=> (
             <li className='"app__flex p-text' key={`link-${item}`}>
                <div />
                <a href={`#${item}`}>{item}</a>
@@ -21,8 +21,12 @@ const Navbar = () => {
 
          ))}
       </ul>
+      
+      <a className='language' href='https://33web.me/'><img src={images.euaflag} alt="brazil flag" /></a> 
+              
 
       <div className="app__navbar-menu">
+      
         <HiMenuAlt4 onClick={() => setToggle(true)} />
 
         {toggle && (
@@ -32,7 +36,7 @@ const Navbar = () => {
           >
             <HiX onClick={() => setToggle(false)} />
             <ul>
-              {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
+              {['home', 'sobre', 'portfolio', 'expertise', 'contato'].map((item) => (
                 <li key={item}>
                   <a href={`#${item}`} onClick={() => setToggle(false)}>
                     {item}
@@ -40,9 +44,13 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
+            <a className='language2' href='https://33web.me/'><img src={images.euaflag} alt="brazil flag" /></a>   
           </motion.div>
         )}
+
       </div>
+
+
     </nav>
   )
 }

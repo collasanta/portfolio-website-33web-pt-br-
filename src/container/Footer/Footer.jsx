@@ -36,7 +36,7 @@ const Footer = () => {
 
   return (
     <>
-      <h2 className="head-text">Lets build together! <span>Chat with us</span></h2>
+      <h2 className="head-text"> hora de construir o futuro, <br></br> <span>Entre em Contato.</span></h2>
 
       <div className="app__footer-cards">
         <div className="app__footer-card ">
@@ -51,38 +51,40 @@ const Footer = () => {
       {!isFormSubmitted ? (
         <div className="app__footer-form app__flex">
           <div className="app__flex">
-            <input className="p-text" type="text" placeholder="Your Name" name="username" value={username} onChange={handleChangeInput} />
+            <input className="p-text" type="text" placeholder="Seu Nome" name="username" value={username} onChange={handleChangeInput} />
           </div>
           <div className="app__flex">
-            <input className="p-text" type="email" placeholder="Your Email" name="email" value={email} onChange={handleChangeInput} />
+            <input className="p-text" type="email" placeholder="Seu Email" name="email" value={email} onChange={handleChangeInput} />
           </div>
           <div>
             <textarea
               className="p-text"
-              placeholder="Your Message"
+              placeholder="Sua Idéia"
               value={message}
               name="message"
               onChange={handleChangeInput}
             />
           </div>
-          <button type="button" className="p-text" onClick={handleSubmit}>{!loading ? 'Send Message' : 'Sending...'}</button>
+          <button type="button" className="p-text" onClick={handleSubmit}>{!loading ? 'Enviar Mensagem' : 'Sending...'}</button>
         </div>
       ) : (
         <div>
           <h3 className="head-text">
-            Thank you for getting in touch!
+            Obrigado, iremos te retornar em breve ;)
           </h3>
 
         </div>
       )}
 
-      <img className="app__footer-img"src={images.logo}></img>
+         <a href='/vcard.vcf' download>
+         <img className="app__footer-img"src={images.logo}></img>
+         </a>
     </>
   );
 };
 
 export default AppWrap(
   MotionWrap(Footer, 'app__footer'),
-  'contact',
+  'contato',
   'app__whitebg',
 );

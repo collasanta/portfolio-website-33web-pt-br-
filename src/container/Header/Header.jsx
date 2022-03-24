@@ -26,15 +26,15 @@ const Header = () => (
         <motion.div className="badge-cmp app__flex"  whileHover={{ scale: 1.1}} >
           <span>👋</span>
           <div style={{ marginLeft: 20 }}>
-            <p className="p-text">Welcome to the</p>
-            <h1 className="head-text">Web3 Revolution</h1>
+            <p className="p-text">Bem vindo a</p>
+            <h1 className="head-text">Revolução Web3</h1>
           </div>
         </motion.div>
 
         <motion.div className="tag-cmp app__flex" whileHover={{ scale: 1.1}}>
-          <p className="p-text">WE ARE A <strong>WEB 3 AGENCY</strong></p>
-          <p className="p-text">THAT DEVELOP <strong>DISRUPTIVE SOLUTIONS</strong></p>
-          <p className="p-text">TO <strong>ADVANCE HUMANITY</strong></p>
+          <p className="p-text">SOMOS UMA <strong>AGENCIA WEB3</strong></p>
+          <p className="p-text">QUE DESENVOLVE <strong>SOLUÇÕES DISRUPTIVAS</strong></p>
+          <p className="p-text">PARA O <strong>AVANÇO DA HUMANIDADE</strong></p>
         </motion.div>
       </div>
     </motion.div>
@@ -45,8 +45,8 @@ const Header = () => (
       className="app__header-img"
     >
       <motion.img
-         transition={{ duration: 5 }}
-         whileInView={{rotate: [0,360], opacity:[0,0,1,1,1,1,1,1,1,1]}}
+         transition={{ repeat: Infinity, duration: 5 }}
+         whileInView={{rotate: [0,360]}}
          src={images.logosnake}
          alt="profile_circle"
          className="overlay_circle"
