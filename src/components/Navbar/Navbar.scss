@@ -173,12 +173,10 @@
  }
 
 .language {
-      
    img {
       width: 30px;
       height: 30px;
       margin: 5px;
-
       @media screen and (max-width: 900px) {
          display: none;
        }
@@ -187,12 +185,9 @@
 }
 
 .language2 {
-      
    img {
       width: 30px;
       height: 30px;
       margin: 5px;
-  
     }
-
 }
